@@ -1,0 +1,94 @@
+@use '../../styles/colors.scss' as color;
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+a {
+    color: color.$color-dark-muted;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    &:hover {
+        color: color.$color-pink;
+    }
+
+    &.active {
+        color: color.$color-pink;
+    }
+}
+
+.navigation {
+    border-bottom: 1px solid color.$color-dark-muted;
+    padding: 1rem;
+
+    ul {
+        display: none;
+    }
+
+    &__brand {
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+
+    &__open__icon {
+        font-size: 2.5rem;
+        color: color.$color-pink;
+        cursor: pointer;
+    }
+
+
+
+}
+
+.hidden {
+    display: none !important;
+    transition: 0.5s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: color.$color-white;
+    z-index: 1;
+    transition: 0.5s;
+
+    a {
+
+        font-size: 1.8rem;
+    }
+
+    &__close__icon {
+        font-size: 2.5rem;
+        color: color.$color-highlight;
+        margin: 1rem 1rem 0 0;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .overlay {
+        display: none !important;
+    }
+
+    .navigation {
+        ul {
+            display: flex;
+        }
+
+        &__open__icon {
+            display: none;
+        }
+
+
+    }
+}
