@@ -1,0 +1,70 @@
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Extra sizes */
+.txt-xs {
+    font-size: 0.8rem;
+}
+
+.txt-sm {
+    font-size: 1.2rem;
+}
+
+.txt-md {
+    font-size: 1.4rem;
+}
+
+.txt-lg {
+    font-size: 1.6rem;
+}
+
+.txt-xl {
+    font-size: 3rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-bold {
+    font-weight: bold;
+}
+
+/* line spacing */
+.lh-1 {
+    line-height: 1.8;
+}
