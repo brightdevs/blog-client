@@ -1,13 +1,11 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import Layout from '../components/Layout';
-
+import Hero from '../components/Hero/Hero';
 const IndexPage = () => {
   return (
     <Layout>
-      <main>
-        <h1>Helo world</h1>
-      </main>
+      <Hero />
     </Layout>
   );
 };

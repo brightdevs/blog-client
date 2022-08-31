@@ -1,0 +1,37 @@
+@use '../../styles/colors.scss' as color;
+
+.hero__content {
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    &-links {
+        a:nth-child(n) {
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: color.$color-pink;
+            }
+        }
+
+        a:nth-child(2) {
+            color: color.$color-pink;
+
+            &:hover {
+                color: color.$color-highlight;
+            }
+        }
+    }
+}
+
+.hero__profile {
+
+
+    &-img {
+        width: 300px;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
