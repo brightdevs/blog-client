@@ -4,6 +4,7 @@ import '../styles/reset.scss';
 import '../styles/utils.scss';
 import '../styles/grid.scss';
 import '../styles/fonts.scss';
+import Footer from '../components/footer/Footer';
 type Props = {
   children: React.ReactNode;
   className?: string;
@@ -14,6 +15,7 @@ const Layout: React.FC<Props> = ({ children, className }) => {
     <>
       <NavBar />
       <main className={`grid ${className}`}>{children}</main>
+      <Footer />
     </>
   );
 };
