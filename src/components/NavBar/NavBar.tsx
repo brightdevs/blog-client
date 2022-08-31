@@ -3,9 +3,19 @@ import { Link } from 'gatsby';
 import './NavBar.scss';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { FaRegWindowClose } from 'react-icons/fa';
+import { toggleOpen } from './index';
 type Props = {};
 
 const NavBar = (props: Props) => {
+  React.useEffect(() => {
+    window.addEventListener('resize', function (e) {
+      const { innerWidth } = window;
+      if (innerWidth > 768) {
+        toggleOpen();
+      }
+    });
+  });
+
   return (
     <>
       <nav className='navigation row-between'>
@@ -39,22 +49,12 @@ const NavBar = (props: Props) => {
             </Link>
           </li>
         </ul>
-        <HiMenuAlt3
-          className='navigation__open__icon'
-          onClick={() => {
-            // get element by class overlay and toggle it's display property
-            const overlay = document.querySelector('.overlay');
-            overlay?.classList.toggle('hidden');
-          }}
-        />
+        <HiMenuAlt3 className='navigation__open__icon' onClick={toggleOpen} />
       </nav>
       <div className='overlay column-between hidden '>
         <div className='width-full  row-end'>
           <FaRegWindowClose
-            onClick={() => {
-              const overlay = document.querySelector('.overlay');
-              overlay?.classList.toggle('hidden');
-            }}
+            onClick={toggleOpen}
             className='overlay__close__icon'
           />
         </div>
