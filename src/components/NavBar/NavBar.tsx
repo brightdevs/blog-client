@@ -8,9 +8,11 @@ type Props = {};
 
 const NavBar = (props: Props) => {
   React.useEffect(() => {
-    window.addEventListener('resize', function (e) {
+    window.addEventListener('resize', function () {
+      const overlay = document.getElementById('overlay');
+      const check = !overlay?.classList.contains('hidden');
       const { innerWidth } = window;
-      if (innerWidth > 768) {
+      if (innerWidth > 768 && check) {
         toggleOpen();
       }
     });
@@ -51,7 +53,7 @@ const NavBar = (props: Props) => {
         </ul>
         <HiMenuAlt3 className='navigation__open__icon' onClick={toggleOpen} />
       </nav>
-      <div className='overlay column-between hidden '>
+      <div id='overlay' className='overlay column-between hidden '>
         <div className='width-full  row-end'>
           <FaRegWindowClose
             onClick={toggleOpen}
