@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = ({ children, className }) => {
     <>
       <NavBar />
       <main className={`grid ${className}`}>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
