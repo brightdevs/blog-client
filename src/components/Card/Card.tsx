@@ -1,12 +1,6 @@
 import React, { FunctionComponent } from 'react';
 // import sample1 from '../../assets/sample-1.png';
-import {
-  StaticImage,
-  GatsbyImage,
-  getImage,
-  GatsbyImageProps,
-  ImageDataLike,
-} from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import MdxNode from '../../interfaces/mdx-node';
 import './Card.scss';
 import { Link } from 'gatsby';
