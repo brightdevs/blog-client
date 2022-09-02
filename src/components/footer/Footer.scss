@@ -1,0 +1,11 @@
+@use '../../styles/colors.scss' as color;
+
+.footer {
+    background-color: color.$color-dark;
+    color: color.$color-white;
+    padding: 1rem;
+    text-align: center;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    min-height: 300px;
+}

@@ -1,0 +1,61 @@
+@use '../styles//colors.scss' as color;
+
+.code {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.code pre {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* mdx */
+
+.nice-text {
+    background: color.$color-pastel-beige;
+    padding: 2rem 1.5rem;
+    color: color.$color-dark-muted;
+    border-radius: 1rem;
+    border-left: 3px solid color.$color-pink;
+    position: relative;
+}
+
+.nice-text h4,
+.nice-text p {
+    color: color.$color-dark-muted;
+}
+
+.nice-text p {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .nice-text {
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+}
+
+.nice-text-icon {
+    position: absolute;
+    top: 0;
+    left: -3px;
+    background: color.$color-white;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid color.$color-white;
+    color: color.$color-pink;
+}
+
+.wrapper {
+    padding: 2rem;
+    max-width: 70%;
+}

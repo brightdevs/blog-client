@@ -35,10 +35,10 @@ const NavBar = (props: Props) => {
           <li className='navigation__list__item'>
             <Link
               activeClassName='active'
-              to='/about'
+              to='/blog'
               className='navigation__list__item__link'
             >
-              About
+              blog
             </Link>
           </li>
           <li className='navigation__list__item'>
