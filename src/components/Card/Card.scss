@@ -3,7 +3,6 @@
 .card {
     width: 95%;
     min-height: 5rem;
-    ;
     background-color: color.$color-white;
     border-radius: 1rem;
     border: 1px solid #e5e5e5;
@@ -61,6 +60,7 @@
         &__link {
             text-decoration: underline;
             color: color.$color-dark;
+            font-size: .8rem;
         }
     }
 }

@@ -9,6 +9,7 @@ import {
 } from 'gatsby-plugin-image';
 import MdxNode from '../../interfaces/mdx-node';
 import './Card.scss';
+import { Link } from 'gatsby';
 type Props = {
   post: MdxNode;
 };
@@ -24,7 +25,7 @@ const Card: FunctionComponent<Props> = ({
   },
 }: Props) => {
   console.log('image', image);
-  const blogImage = image && getImage(image as ImageDataLike);
+  const blogImage = image && getImage(image);
 
   return (
     <div className='card column-start '>
@@ -37,7 +38,12 @@ const Card: FunctionComponent<Props> = ({
         <span className='highlight'>{category} </span>
         <h4>{slug} </h4>
         <p>{excerpt} </p>
-        <span className='card__content__link'>Read more</span>
+        <Link
+          to={`/posts/${slug}`}
+          className='card__content__link margin-top-1'
+        >
+          Continue reading
+        </Link>
       </div>
     </div>
   );

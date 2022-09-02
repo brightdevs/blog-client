@@ -1,4 +1,4 @@
-import { ImageDataLike, GatsbyImageProps } from 'gatsby-plugin-image';
+import { ImageDataLike } from 'gatsby-plugin-image';
 
 export default interface MdxNode {
   excerpt: string;
@@ -10,10 +10,6 @@ export default interface MdxNode {
     slug: string;
     category: string;
     title: string;
-    image: {
-      childImageSharp: {
-        gatsbyImageData: any;
-      };
-    };
+    image: ImageDataLike;
   };
 }
