@@ -4,6 +4,7 @@ import './NavBar.scss';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { FaRegWindowClose } from 'react-icons/fa';
 import { toggleOpen } from './index';
+import Categories from '../Categories';
 type Props = {};
 
 const NavBar = (props: Props) => {
@@ -60,35 +61,38 @@ const NavBar = (props: Props) => {
             className='overlay__close__icon'
           />
         </div>
-        <ul className='navigation__list column-center'>
-          <li className='navigation__list__item'>
-            <Link
-              activeClassName='active'
-              to='/'
-              className='navigation__list__item__link'
-            >
-              Home
-            </Link>
-          </li>
-          <li className='navigation__list__item'>
-            <Link
-              activeClassName='active'
-              to='/about'
-              className='navigation__list__item__link'
-            >
-              About
-            </Link>
-          </li>
-          <li className='navigation__list__item'>
-            <Link
-              activeClassName='active'
-              to='/contact'
-              className='navigation__list__item__link'
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className='menu'>
+          <ul className='navigation__list column-center'>
+            <li className='navigation__list__item'>
+              <Link
+                activeClassName='active'
+                to='/'
+                className='navigation__list__item__link'
+              >
+                Home
+              </Link>
+            </li>
+            <li className='navigation__list__item'>
+              <Link
+                activeClassName='active'
+                to='/about'
+                className='navigation__list__item__link'
+              >
+                About
+              </Link>
+            </li>
+            <li className='navigation__list__item'>
+              <Link
+                activeClassName='active'
+                to='/contact'
+                className='navigation__list__item__link'
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+          <Categories center={true} />
+        </div>
         <div></div>
       </div>
     </>

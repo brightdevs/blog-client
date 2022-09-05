@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import MdxNode from '../interfaces/mdx-node';
 import Posts from '../components/Posts/Posts';
 import '../styles/Blog.scss';
+import Categories from '../components/Categories';
 type DataProps = {
   allMdx: {
     nodes: MdxNode[];
@@ -33,8 +34,8 @@ const blog = ({
         </div>
       </section>
       <Posts latestPosts={allPosts} title='All Posts' gridColSpan={3} />
-      <aside className='grid-col-span-1 bg-1'>
-        <span>sidebar</span>
+      <aside className='grid-col-span-1 bg-3 rounded'>
+        <Categories />
       </aside>
     </Layout>
   );

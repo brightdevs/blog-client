@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 const shortcodes = { Link }; // Provide common components here
 import './post-template.scss';
+import Categories from '../components/Categories';
 export default function PostTemplate({ data, children }: any) {
   const {
     mdx: {
@@ -35,16 +36,10 @@ export default function PostTemplate({ data, children }: any) {
           <MDXProvider components={shortcodes}>{children}</MDXProvider>
         </div>
       </article>
-      <aside className='blog__sidebar grid-col-span-1 bg-2'>
-        <span>sidebar</span>
+      <aside className='grid-col-span-1 bg-3 rounded'>
+        <Categories />
       </aside>
     </Layout>
-    /*  <>
-      <h1>This is the page template</h1>
-      <h1>title: {data.mdx.frontmatter.title}</h1>
-      <h2>Body below:</h2>
-      <MDXProvider components={shortcodes}>{children}</MDXProvider>
-    </> */
   );
 }
 

@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import MdxNode from '../interfaces/mdx-node';
 import Posts from '../components/Posts/Posts';
 import HeroImage from '../components/Hero/HeroImage';
+import Categories from '../components/Categories';
 type DataProps = {
   allMdx: {
     nodes: MdxNode[];
@@ -33,6 +34,9 @@ const CategoryTemplate: React.FC<PageProps<DataProps>> = (props) => {
         scrollable={false}
         gridColSpan={3}
       />
+      <aside className='grid-col-span-1 bg-3 rounded'>
+        <Categories />
+      </aside>
     </Layout>
   );
 };
