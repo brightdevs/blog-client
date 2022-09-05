@@ -8,11 +8,14 @@ const shortcodes = { Link }; // Provide common components here
 import './post-template.scss';
 import Categories from '../components/Categories';
 export default function PostTemplate({ data, children }: any) {
+  console.log('children', children);
+
   const {
     mdx: {
-      frontmatter: { title, category, image, date },
+      frontmatter: { title, category, image, date, embededImages },
     },
   } = data;
+
   const blogImage = image && getImage(image);
   return (
     <Layout>
@@ -33,7 +36,22 @@ export default function PostTemplate({ data, children }: any) {
         </div>
         <hr />
         <div className='mdx-wrapper'>
-          <MDXProvider components={shortcodes}>{children}</MDXProvider>
+          <MDXProvider
+            components={{
+              // h1: (props: any) => (
+              //   <h1 className='txt-xl txt-color-highlight' {...props} />
+              // ),
+              p: (props: any) => {
+                if (props.children.type === 'div') {
+                  return <div {...props} />;
+                }
+
+                return <>{props.children}</>;
+              },
+            }}
+          >
+            {children}
+          </MDXProvider>
         </div>
       </article>
       <aside className='grid-col-span-1 bg-3 rounded'>
@@ -52,6 +70,11 @@ export const query = graphql`
         slug
         title
         readTime
+        embededImages {
+          childrenImageSharp {
+            gatsbyImageData
+          }
+        }
         image {
           childImageSharp {
             gatsbyImageData
