@@ -32,10 +32,7 @@ const Card: FunctionComponent<Props> = ({
         <span className='highlight'>{category} </span>
         <h4>{slug} </h4>
         <p>{excerpt} </p>
-        <Link
-          to={`/posts/${slug}`}
-          className='card__content__link margin-top-1'
-        >
+        <Link to={`/blog/${slug}`} className='card__content__link margin-top-1'>
           Continue reading
         </Link>
       </div>

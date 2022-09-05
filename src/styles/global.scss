@@ -1,19 +1,6 @@
 @use '../styles//colors.scss' as color;
 
-.code {
-    background: #1e1e1e;
-    color: #fff;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    margin: 2rem 0;
-    font-size: 1.2rem;
-    overflow-x: scroll;
-    position: relative;
-}
 
-.code pre {
-    font-family: 'Courier New', Courier, monospace;
-}
 
 /* mdx */
 

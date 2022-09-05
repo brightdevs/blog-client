@@ -1,0 +1,52 @@
+.mdx-wrapper {
+
+    margin: 1rem 0;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #4c4fee;
+    color: #666;
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+    padding: 1rem 1.5rem !important;
+}
+
+pre code {
+    white-space: pre-line;
+
+    // display: block;
+    // background: none;
+    // white-space: pre;
+    // -webkit-overflow-scrolling: touch;
+    // overflow-x: scroll;
+    // max-width: 100%;
+    // min-width: 100px;
+    // padding: 0;
+    // word-wrap: break-word;
+    // overflow-x: auto;
+    // word-wrap: break-word;
+    // overflow-wrap: break-word;
+}
+
+// at widht 767px make code blocks full width
+@media screen and (max-width: 767px) {
+    pre {
+        background-color: #EEEEEE;
+        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+        margin-bottom: 10px;
+        max-height: 600px;
+        overflow: auto;
+        padding: 5px;
+        width: auto;
+    }
+}
