@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 const shortcodes = { Link }; // Provide common components here
 import { RegVideo, Video } from '../components/Complete';
+import components from './components';
 import './post-template.scss';
 import Categories from '../components/Categories';
 export default function PostTemplate({ data, children }: any) {
@@ -37,25 +38,7 @@ export default function PostTemplate({ data, children }: any) {
         </div>
         <hr />
         <div className='mdx-wrapper'>
-          <MDXProvider
-            components={{
-              // h1: (props: any) => (
-              //   <h1 className='txt-xl txt-color-highlight' {...props} />
-              // ),
-              p: (props: any) => {
-                if (props.children.type === 'div') {
-                  return <div {...props} />;
-                }
-
-                return <>{props.children}</>;
-              },
-              // add RegVideo
-              RegVideo: () => <RegVideo />,
-              Video: () => <Video />,
-            }}
-          >
-            {children}
-          </MDXProvider>
+          <MDXProvider components={components}>{children}</MDXProvider>
         </div>
       </article>
       <aside className='grid-col-span-1 bg-3 rounded'>
