@@ -45,12 +45,11 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'assets',
+        name: `assets`,
         path: `${__dirname}/src/assets`,
       },
-      __key: 'assets',
     },
     {
       resolve: 'gatsby-source-filesystem',

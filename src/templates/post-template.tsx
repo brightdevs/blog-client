@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 const shortcodes = { Link }; // Provide common components here
+import { RegVideo, Video } from '../components/Complete';
 import './post-template.scss';
 import Categories from '../components/Categories';
 export default function PostTemplate({ data, children }: any) {
@@ -48,6 +49,9 @@ export default function PostTemplate({ data, children }: any) {
 
                 return <>{props.children}</>;
               },
+              // add RegVideo
+              RegVideo: () => <RegVideo />,
+              Video: () => <Video />,
             }}
           >
             {children}
