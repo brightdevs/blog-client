@@ -22,7 +22,7 @@ const IndexPage = ({
   return (
     <Layout>
       <Hero />
-      <Posts latestPosts={latestPosts} title='Latest Post' />
+      <Posts latestPosts={latestPosts} title='Latest Post' scrollable={false} />
     </Layout>
   );
 };

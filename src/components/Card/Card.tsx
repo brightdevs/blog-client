@@ -22,13 +22,13 @@ const Card: FunctionComponent<Props> = ({
   const blogImage = image && getImage(image);
 
   return (
-    <div className='card column-start '>
-      <div className='card__img '>
+    <div className='card column-start grid'>
+      <div className='card__img grid-col-span-2'>
         {blogImage && (
           <GatsbyImage image={blogImage} alt={title} className='card__img' />
         )}
       </div>
-      <div className='card__content column-between-start'>
+      <div className='card__content column-between-start grid-col-span-2'>
         <span className='highlight'>{category} </span>
         <h4>{slug} </h4>
         <p>{excerpt} </p>

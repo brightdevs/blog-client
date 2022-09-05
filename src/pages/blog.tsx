@@ -32,7 +32,10 @@ const blog = ({
           </p>
         </div>
       </section>
-      <Posts latestPosts={allPosts} title='All Posts' />
+      <Posts latestPosts={allPosts} title='All Posts' gridColSpan={3} />
+      <aside className='grid-col-span-1 bg-1'>
+        <span>sidebar</span>
+      </aside>
     </Layout>
   );
 };

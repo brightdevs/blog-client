@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }: any) => {
       context: { id: node.id },
     });
   });
-  categories.distinct.forEach((category: any) => {
+  categories.distinct.forEach((category: string) => {
     createPage({
       path: `/${category}`,
       component: path.resolve(`./src/templates/category-template.tsx`),
